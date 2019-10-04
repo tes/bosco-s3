@@ -1,0 +1,78 @@
+{
+  "name": "bosco-s3",
+  "version": "0.0.0",
+  "description": "Bosco s3 will take care of pushing assets to s3",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "nyc mocha",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run test",
+      "pre-push": "npm audit"
+    }
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  },
+  "keywords": [
+    "micro",
+    "service",
+    "build",
+    "automation",
+    "minification",
+    "s3",
+    "project"
+  ],
+  "bin": {
+    "bosco": "./bin/bosco-s3.js"
+  },
+  "man": [
+    "./man/bosco-s3delete.3",
+    "./man/bosco-s3push.3"
+  ],
+  "directories": {
+    "bin": "./bin"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tes/bosco-s3.git"
+  },
+  "author": "clifton.cunningham@tes.co.uk",
+  "license": "MIT",
+  "dependencies": {
+    "async": "^1.4.2",
+    "bosco-core": "0.0.4",
+    "clean-css": "^4.2.1",
+    "glob": "^7.0.3",
+    "handlebars": "^4.3.1",
+    "iltorb": "^2.3.2",
+    "lodash": "^4.17.15",
+    "mime": "^1.2.11",
+    "moment": "^2.12.0",
+    "pm2": "^3.5.1",
+    "request": "^2.40.0",
+    "sf": "^0.1.7",
+    "tail": "^1.1.0",
+    "tty-table": "^2.7.3",
+    "uglify-js": "^2.6.1"
+  },
+  "devDependencies": {
+    "coveralls": "^3.0.2",
+    "eslint": "^6.2.2",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "expect.js": "^0.3.1",
+    "gulp": "^4.0.0",
+    "husky": "^1.2.1",
+    "marked": "^0.7.0",
+    "marked-man": "^0.6.0",
+    "mocha": "^5.2.0",
+    "npm-audit-helper": "^2.3.16",
+    "nyc": "^14.1.1",
+    "sinon": "^1.17.1"
+  }
+}

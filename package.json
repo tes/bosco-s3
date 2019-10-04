@@ -1,6 +1,6 @@
 {
   "name": "bosco-s3",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Bosco s3 will take care of pushing assets to s3",
   "main": "index.js",
   "scripts": {

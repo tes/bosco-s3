@@ -13,7 +13,7 @@ Commands in Bosco are defined via specific command files within the 'commands' f
 To get help on any command just type;
 
 ```
-bosco help s3push
+bosco-s3 help s3push
 ```
 
 ## Parameters
@@ -40,7 +40,7 @@ To see all possible commands and parameters, just type 'bosco'.
 This will create bundles for front end assets (JS, CSS, Templates), this command can be run *across* repositories in a workspace, but it is typically run within a single service (hence the -s parameter below) by a build server that dynamically assigns a build number.
 
 ```
-bosco s3push -s -e <environment> -b <buildnumber>
+bosco-s3 s3push -s -e <environment> -b <buildnumber>
 ```
 
 This command requires that you have configured your AWS details for S3.  Best to put these into a .bosco folder in the project workspace a per environment config, e.g. .bosco/tes.json.

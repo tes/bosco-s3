@@ -28,7 +28,7 @@
     "project"
   ],
   "bin": {
-    "bosco": "./bin/bosco.js"
+    "bosco-s3": "./bin/bosco.js"
   },
   "man": [
     "./man/bosco-s3delete.3",
